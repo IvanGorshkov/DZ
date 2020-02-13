@@ -1,0 +1,30 @@
+<%= form_for(:user, url: '/users',  html: {class: "login"}) do |f| %>
+  <h1>Быстрая регистрация</h1>
+  <input type="text" class="input_text_login"  name="user[nick]" id="user_nick" placeholder="Никнейм"/>
+  <input type="text" class="input_text_login"  name="user[name]" id="user_name" placeholder="Имя"/>
+  <input type="text" class="input_text_login"  name="user[surname]" id="user_surname" placeholder="Фамилия"/>
+  <input type="email" class="input_text_login"  name="user[email]" id="user_email" placeholder="e-mail"/>
+  <input type="password" class="input_text_login"  name="user[password]" id="user_password" placeholder="Пароль" />
+  <input type="password" class="input_text_login"  name="user[password_confirmation]" id="user_password_confirmation" placeholder="Подтверждение пароля"/>
+  <input type="submit" class="btn"  name="commit" value="Зарегистрироваться" class = "btn btn-primary" data-disable-with="Попытка регистрации" onclick="myFunction()"/>
+  <p id="error"></p>
+<% end %>
+
+<script>
+    function myFunction() {
+        var x,y, text;
+
+        // Get the value of the input field with id="numb"
+        x = document.getElementById("user_password").value;
+        y = document.getElementById("user_password_confirmation").value;
+
+        // If x is Not a Number or less than one or greater than 10
+        if (x==y) {
+
+        } else {
+            text = "Пароли не совпадают";
+            document.getElementById("error").innerHTML = text;
+        }
+
+    }
+</script>

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_user: 9.99
+  id_friend: 9.99
+
+two:
+  id_user: 9.99
+  id_friend: 9.99

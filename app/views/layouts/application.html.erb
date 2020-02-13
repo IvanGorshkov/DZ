@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DZ</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="container">
+  <header class="header" id="header">
+      <div class="header__inner">
+        <%= link_to "SocialBMSTU", '/',:class => "header__logo"  %>
+
+        <nav class="nav" id="nav">
+          <a class="nav__link"><% if current_user %>  Привет, <%= current_user.name %>!</a>
+             <%= link_to "Выйти?", '/logout',:class => "nav__link"  %>  <%end %>
+        </nav>
+
+      </div>
+  </header>
+    </div>
+  <div class="page">
+    <%= yield %>
+    </div>
+
+  </body>
+</html>

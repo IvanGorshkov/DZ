@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="column left">
+    <ul>
+      <li><%= link_to 'Профиль', '/'  %></li>
+      <li><%= link_to 'Друзья', '/view_friends'  %></li>
+      <li> <%= link_to 'Новости', '/posts'  %></li>
+      <li><%= link_to 'Диалоги', '/messenger'  %></li>
+    </ul>
+  </div>
+  <div class="column right">
+<div class = "post_con">
+          <%= form_tag '/post_add',  remote:true do %>
+        <h1>Что у вас нового? </h1>
+        <textarea id="textarea", placeholder="Написать сообщение!", name="post"></textarea>
+        <input name="commit" type="submit" value="Отправить" onclick="return send_query();"  />
+     <%end %>
+        <h1>Последние новости</h1>
+        <table id="posts">
+          <% @res_posts.each do |res| %>
+          <tr>
+            <td>
+              <div class="post_content">
+              <%= link_to res[0][0], "/?id_user=#{res[3][0]}"  %>
+                <div class="text_post"><%= res[1][0] %></div>
+              </div>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+  </div>
+</div>
+</div>
+<script>
+    function send_query() {
+
+    }
+</script>

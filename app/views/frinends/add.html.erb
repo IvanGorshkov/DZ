@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="column left" >
+    <ul>
+      <li><%= link_to 'Профиль', '/'  %></li>
+      <li><%= link_to 'Друзья', '/view_friends'  %></li>
+      <li> <%= link_to 'Новости', '/posts'  %></li>
+      <li><%= link_to 'Диалоги', '/messenger'  %></li>
+    </ul>
+  </div>
+
+
+  <div class="column right">
+    <form class="find_frinends" name="frinends" method="get">
+    <input type="text" name="name" id="name" placeholder="Имя пользователя"/>
+    <input name="commit" type="submit" value="Найти" onclick="return send_query();" />
+    </form>
+    <table id="friends_table">
+      <tr> <th>Найденые друзья</th></tr>
+
+    </table>
+  </div>
+</div>
+<script>
+    calc_url= location.protocol + "//" + location.host + "/add.json"
+    function send_query(){
+
+        var frm = document.forms.frinends;
+        var param_str = "?" +"name=" + frm.name.value
+
+        if (param_str == "") return false;
+        var my_JSON_object = {};
+        var http_request = new XMLHttpRequest();
+
+        http_request.open("GET", calc_url+param_str, true);
+        http_request.onreadystatechange = function () {
+            var done = 4, ok = 200;
+
+            if (http_request.readyState == done &&
+                http_request.status == ok) {
+
+                my_JSON_object = JSON.parse(http_request.responseText);
+                show_result(my_JSON_object);
+            }
+        };
+        http_request.send(null);
+        return false;
+    }
+
+    function show_result(data){
+
+        var table = document.getElementById("friends_table");
+        for(var i = table.rows.length - 1; i >= 1; i--)
+        {
+            table.deleteRow(i);
+        }
+        var tbody = document.getElementById('friends_table');
+
+
+        data.man.forEach(function(rowData) {
+            var tr = document.createElement('tr')
+            tbody.appendChild(tr);
+            var td1 = document.createElement('td')
+            tr.appendChild(td1);
+            var name = rowData.surname + ' ' + rowData.name;
+            td1.appendChild(document.createTextNode(name))
+            var input = document.createElement('input')
+            input.type = "submit"
+            input.value =  "Добавить друга"
+
+            var input_hidden = document.createElement('input')
+
+            input_hidden.type = "hidden"
+            input_hidden.name = "add_friend"
+
+            input_hidden.value =  rowData.id
+
+            var form = document.createElement('form')
+            form.method = "post"
+            form.action = "/add_friend"
+            form.appendChild(input)
+            form.appendChild(input_hidden)
+            td1.appendChild(form)
+        });
+
+    }
+</script>
+
+
+

@@ -1,0 +1,108 @@
+// Place all the styles related to the Messenger controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container_mes{
+  margin: 0px 50px;
+  width: fit-content;
+}
+.container_mes form{
+  margin: 0px 25px;
+  padding: 20px;
+  padding-top: 10px;
+ border-bottom-right-radius:10px;
+  border-bottom-left-radius:10px;
+  width: fit-content;
+  background-color: #4a76a8;
+}
+.container_mes form input{
+  border-bottom: white solid 3px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: inline;
+  color: white;
+  background-color: #4a76a8;
+  font-size: 16px;
+}
+.container_mes form select{
+  border-bottom: white solid 3px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: inline;
+  color: white;
+  background-color: #4a76a8;
+  font-size: 16px;
+}
+#my_messeges{
+  max-width: 500px;
+}
+#my_messeges tr{
+  border-radius: 10px;
+
+}
+
+#my_messeges td{
+  border: #edeef0 solid 10px;
+}
+#content_mes{
+  border-radius: 10px;
+  background-color: #4a76a8;
+  padding-left: 10px;
+}
+#content_mes a{
+  color: white;
+}
+
+.content_mes_row{
+  overflow-wrap: break-word;
+  width: 500px;
+  color: white;
+  padding:10px 10px;
+
+}
+
+#h1_dialog{
+  background-color: #4a76a8;
+  color: #FFFFFF;
+
+  min-width: 500px;
+  margin-left: 25px;
+  padding-left: 28px;
+  border-bottom: #FFFFFF solid 1px;
+}
+#content_mes a h1{
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 35px;
+  padding-right: 20px;
+  border-bottom: #FFFFFF solid 2px;
+}
+#dialog{
+  padding-top: 10px;
+  margin-left: 25px;
+  background-color: #4a76a8;
+  border-bottom-right-radius: 10px;
+  border-bottom: #FFFFFF solid 1px;
+}
+#dialog td:first-child{
+  max-width: 500px;
+  min-width: 500px;
+  color: #FFFFFF;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+#dialog td:last-child{
+  max-width: 500px;
+  min-width: 500px;
+  color: #FFFFFF;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  text-align: right;
+  overflow-wrap: break-word;
+}

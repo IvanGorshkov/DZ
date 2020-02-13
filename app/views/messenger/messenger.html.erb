@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="column left" >
+    <ul>
+      <li><%= link_to 'Профиль', '/'  %></li>
+      <li><%= link_to 'Друзья', '/view_friends'  %></li>
+      <li> <%= link_to 'Новости', '/posts'  %></li>
+      <li><%= link_to 'Диалоги', '/messenger'  %></li>
+    </ul>
+  </div>
+  <div class="column right">
+    <div class="container_mes">
+    <form action="/dialog">
+      <select name = "id_friend">
+      <% @res.each do |result| %>
+        <option value = "<%= result[1][0] %>"><%= result[0][0] %></option>
+<% end %>
+      </select>
+      <input type="submit", value="Написать">
+    </form>
+      <h1>Мои сообщения</h1>
+    <table id="my_messeges">
+
+      <% @dial.each do |result| %>
+        <tr><td>
+          <div id="content_mes">
+          <a href="/dialog?id_friend=<%= result[2][0] %>">
+          <h1><%= result[0][0] %></h1>   </a>
+            <div class="content_mes_row"> <%= result[1][0] %> </div>
+          </a>
+          </div></td></tr>
+        </td></tr>
+      <% end %>
+        </table>
+  </div>
+  </div>
+</div>

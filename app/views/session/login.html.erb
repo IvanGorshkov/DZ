@@ -1,0 +1,12 @@
+<!----<p class="welcome_text">Приветсвую вас на сайте SocialBMSTU, Здесь вы сможете общаться с вашими одногрппниками и со всей Бамуманкой!</p> --->
+  <%= form_tag '/login', class: "login" do %>
+
+    <h1>Вход</h1>
+    <input type="text" class="input_text_login" name="nick" id="nick" placeholder="Логин"/>
+    <input type="password" class="input_text_login"  name="password" id="password" placeholder="Пароль" />
+    <input type="submit" class="btn"  name="commit" value="Войти" class = "btn_login" data-disable-with="Попытка входа"/><br>
+    <input type="button" class="btn" value="Регистрация" onclick="window.location='/signup';" />
+  <% if flash[:alert] %>
+    <div class="notice"><%= flash[:alert] %></div>
+  <% end %>
+<% end %>

@@ -1,0 +1,72 @@
+// Place all the styles related to the News controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.post_con {
+  margin: 0px 50px;
+  width: fit-content;
+
+}
+.post_con form h1{
+    background-color: #4a76a8;
+  color: white;
+  width: 380px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#textarea{
+    height: 100px;
+    width: 380px;
+    max-width: 400px; 
+  border-bottom: white solid 3px;
+    padding: 12px 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+   
+}
+.post_con form input{
+     border-bottom: white solid 3px;
+    padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+    display: inline;
+    color: white;
+    background-color: #4a76a8;
+    font-size: 20px;
+}
+#posts{
+max-width: 70%;
+}
+#posts tr{
+  border-radius: 10px;
+
+}
+
+#posts td{
+  border: #edeef0 solid 10px;
+}
+.post_content{
+  border-radius: 10px;
+  background-color: #4a76a8;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: pre-line;
+}
+.post_content a{
+  color: white;
+  font-size: 30px;
+  border-bottom: #FFFFFF solid 2px;
+}
+.post_content div{
+  padding-top: 10px;
+ width: 700px;
+}

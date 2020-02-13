@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="column left">
+   <ul>
+     <li><%= link_to 'Профиль', '/'  %></li>
+     <li><%= link_to 'Друзья', '/view_friends'  %></li>
+     <li> <%= link_to 'Новости', '/posts'  %></li>
+     <li><%= link_to 'Диалоги', '/messenger'  %></li>
+   </ul>
+  </div>
+  <div class="column right">
+    <div class="container_right">
+    <p>Анкета:</p>
+    <% if @id_user == nil  %>
+    <% if current_user %>
+      <p>Имя: <%= current_user.name %></p>
+      <p>Фамилия: <%= current_user.surname %></p>
+      <p>Никнейм: <%= current_user.nick %></p>
+      <p>Почта: <%= mail_to current_user.email  %></p>
+    <%end %>
+     <%else %>
+        <% if @frineduser == nil %>
+
+        <%else %>
+      <p>Имя: <%= @frineduser.name %></p>
+      <p>Фамилия: <%= @frineduser.surname %></p>
+      <p>Никнейм: <%= @frineduser.nick %></p>
+      <p>Почта: <%= mail_to @frineduser.email  %></p>
+        <%end %>
+    <%end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+// Place all the styles related to the Frinends controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.button_to > input{
+  background-color: #4a76a8;
+  color: white;
+  width: 240px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+}
+table#view_friends_id{
+  background: #4a76a8;
+  margin-top: 10px;
+  width: 240px;
+  border-radius: 10px;
+  color: white;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+table#view_friends_id td  a {
+  color: #edeef0;
+
+}
+table#view_friends_id td  {
+  border-bottom: white solid 3px;
+}
+.find_frinends{
+    margin-top: 10px;
+}
+.find_frinends input:first-child{
+     border-bottom: white solid 3px;
+    width: 50%;
+    padding: 12px 20px;
+  margin-left: 10px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+     display: inline;
+    font-size: 20px;
+}
+.find_frinends input:last-child{
+     border-bottom: white solid 3px;
+    width: 100px;
+    padding: 12px 20px;
+  margin: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+    display: inline;
+    color: white;
+    background-color: #4a76a8;
+    font-size: 20px;
+}
+#friends_table{
+    
+    margin-left: 10px;
+    background: #4a76a8;
+  margin-top: 10px;
+  width: 50%;
+  border-radius: 10px;
+  color: white;
+  padding: 0 20px;
+  padding-bottom: 20px;
+
+
+}
+table#friends_table td  {
+  border-bottom: white solid 3px;
+ display: flex;
+
+}
+
+table#friends_table td form input {
+   border-bottom: white solid 3px;
+  margin: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+    color: #4a76a8;
+    background-color: #FFFFFF;
+}
